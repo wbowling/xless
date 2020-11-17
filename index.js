@@ -41,6 +41,8 @@ function generate_blind_xss_alert(body) {
 
     if (body[k] === "") {
       alert += "*"+k+":* " + "```None```" + "\n"
+    } else if (k === "Screenshot URL") {
+      alert += "*"+k+":* " + body[k] + "#.png\n"
     } else {
       alert += "*"+k+":* " + "```" + body[k] + "```" + "\n"
     }
